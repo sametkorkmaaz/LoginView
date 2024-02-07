@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KorkmazApp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZk-1y-fMS">
+                                <rect key="frame" x="16" y="184" width="361" height="48"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="40"/>
+                                <color key="textColor" name="3.renk"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="4pP-vh-pqD">
+                                <rect key="frame" x="16" y="272" width="361" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="t4S-v5-Efl"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Giriş yap"/>
+                                    <segment title="Üye ol"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="segmentAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="qmW-cw-Mgw"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rKR-hB-H6J">
+                                <rect key="frame" x="16" y="314" width="361" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Cd8-sb-IhX"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="PMg-o4-UMJ" kind="embed" id="5FY-ZH-A4a"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4y-HM-Fe6">
+                                <rect key="frame" x="16" y="314" width="361" height="300"/>
+                                <connections>
+                                    <segue destination="U1g-up-2XJ" kind="embed" id="Iqh-YT-qiu"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qTg-6G-orl">
+                                <rect key="frame" x="16" y="654" width="361" height="62.666666666666629"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diğer giriş seçenekleri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ip3-bw-0YI">
+                                        <rect key="frame" x="89.666666666666671" y="0.0" width="181.66666666666663" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" name="3.renk"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="dhb-Mh-mBB">
+                                        <rect key="frame" x="130.66666666666666" y="28.333333333333375" width="100" height="34.333333333333343"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mcb-wh-Ut0">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="34.333333333333336"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34.333333333333336" id="Dwp-Oo-Z0f"/>
+                                                    <constraint firstAttribute="width" constant="30" id="cn0-x4-pe5"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="google"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0D-gr-i5w">
+                                                <rect key="frame" x="35" y="0.0" width="30" height="34.333333333333336"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="Mx0-Uc-LAa"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="facebooklogo"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwV-jc-tFO">
+                                                <rect key="frame" x="70" y="0.0" width="30" height="34.333333333333336"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="Msr-tx-YNE"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="phonelogo"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="jwV-jc-tFO" firstAttribute="height" secondItem="m0D-gr-i5w" secondAttribute="height" id="8YM-KI-viA"/>
+                                            <constraint firstItem="Mcb-wh-Ut0" firstAttribute="width" secondItem="m0D-gr-i5w" secondAttribute="width" id="9ZQ-zw-EsK"/>
+                                            <constraint firstItem="m0D-gr-i5w" firstAttribute="width" secondItem="jwV-jc-tFO" secondAttribute="width" id="IZz-P7-Glb"/>
+                                            <constraint firstItem="m0D-gr-i5w" firstAttribute="height" secondItem="Mcb-wh-Ut0" secondAttribute="height" id="grv-zb-iPw"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="AnaRenk"/>
+                        <constraints>
+                            <constraint firstItem="v4y-HM-Fe6" firstAttribute="height" secondItem="rKR-hB-H6J" secondAttribute="height" id="55D-T3-YTZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rKR-hB-H6J" secondAttribute="trailing" constant="16" id="9Jc-Ih-q53"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qTg-6G-orl" secondAttribute="trailing" constant="16" id="CLy-8m-9IZ"/>
+                            <constraint firstItem="qTg-6G-orl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="JIU-k6-E10"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OZk-1y-fMS" secondAttribute="trailing" constant="16" id="QhR-kB-Oyb"/>
+                            <constraint firstItem="v4y-HM-Fe6" firstAttribute="centerX" secondItem="rKR-hB-H6J" secondAttribute="centerX" id="S6q-V8-c7d"/>
+                            <constraint firstItem="v4y-HM-Fe6" firstAttribute="top" secondItem="rKR-hB-H6J" secondAttribute="top" id="SjY-q2-Wiz"/>
+                            <constraint firstItem="rKR-hB-H6J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ZyP-jp-JzA"/>
+                            <constraint firstItem="4pP-vh-pqD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="bE6-mp-yQ2"/>
+                            <constraint firstItem="rKR-hB-H6J" firstAttribute="top" secondItem="4pP-vh-pqD" secondAttribute="bottom" constant="10" id="dVd-zF-Qfu"/>
+                            <constraint firstItem="OZk-1y-fMS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="125" id="fc1-Fh-kAb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4pP-vh-pqD" secondAttribute="trailing" constant="16" id="gC4-a4-9ve"/>
+                            <constraint firstItem="OZk-1y-fMS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="mIX-Su-zuS"/>
+                            <constraint firstItem="4pP-vh-pqD" firstAttribute="top" secondItem="OZk-1y-fMS" secondAttribute="bottom" constant="40" id="mgi-bu-28b"/>
+                            <constraint firstItem="qTg-6G-orl" firstAttribute="top" secondItem="rKR-hB-H6J" secondAttribute="bottom" constant="40" id="pBE-4s-JUs"/>
+                            <constraint firstItem="v4y-HM-Fe6" firstAttribute="width" secondItem="rKR-hB-H6J" secondAttribute="width" id="zHN-iM-8FG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="girisyapSegmentView" destination="rKR-hB-H6J" id="tAg-pF-S2t"/>
+                        <outlet property="segmentOutlet" destination="4pP-vh-pqD" id="Nt3-IF-VJV"/>
+                        <outlet property="uyeolSegmentView" destination="v4y-HM-Fe6" id="56w-yR-bVT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125.95419847328243" y="3.5211267605633805"/>
+        </scene>
+        <!--Girisyap View Controller-->
+        <scene sceneID="t5k-N9-VuL">
+            <objects>
+                <viewController id="PMg-o4-UMJ" customClass="girisyapViewController" customModule="LoginView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yd0-tT-Tiy">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ovT-E5-JfL">
+                                <rect key="frame" x="0.0" y="10" width="361" height="98"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Kullanıcı adı" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UA0-TH-GRy">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="45"/>
+                                        <color key="backgroundColor" name="2.renk"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="lLb-FX-R98"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Şifre" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VPl-2E-VCg">
+                                        <rect key="frame" x="0.0" y="53" width="361" height="45"/>
+                                        <color key="backgroundColor" name="2.renk"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="sqS-o0-cnc"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZL-NJ-HTt">
+                                <rect key="frame" x="239" y="128" width="122" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="OI4-h5-hA8"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Şifremi unuttum">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="0.0"/>
+                                    <color key="baseForegroundColor" name="3.renk"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TB-2o-qcg">
+                                <rect key="frame" x="0.0" y="168" width="361" height="45"/>
+                                <color key="backgroundColor" name="3.renk"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="NUH-7T-twl"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Giriş yap">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xFl-OG-Zbm"/>
+                        <color key="backgroundColor" name="AnaRenk"/>
+                        <constraints>
+                            <constraint firstItem="xFl-OG-Zbm" firstAttribute="trailing" secondItem="6TB-2o-qcg" secondAttribute="trailing" id="8zW-NZ-9Wz"/>
+                            <constraint firstItem="ovT-E5-JfL" firstAttribute="leading" secondItem="xFl-OG-Zbm" secondAttribute="leading" id="91d-1T-zKK"/>
+                            <constraint firstItem="xFl-OG-Zbm" firstAttribute="trailing" secondItem="ovT-E5-JfL" secondAttribute="trailing" id="EMK-Ch-Uiz"/>
+                            <constraint firstItem="ZZL-NJ-HTt" firstAttribute="top" secondItem="ovT-E5-JfL" secondAttribute="bottom" constant="20" id="ajf-cW-y9j"/>
+                            <constraint firstItem="ZZL-NJ-HTt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xFl-OG-Zbm" secondAttribute="leading" symbolic="YES" id="b5d-AS-lHk"/>
+                            <constraint firstItem="6TB-2o-qcg" firstAttribute="leading" secondItem="xFl-OG-Zbm" secondAttribute="leading" id="eco-Uk-Cbb"/>
+                            <constraint firstItem="xFl-OG-Zbm" firstAttribute="trailing" secondItem="ZZL-NJ-HTt" secondAttribute="trailing" id="h5N-Fs-Syq"/>
+                            <constraint firstItem="ovT-E5-JfL" firstAttribute="top" secondItem="yd0-tT-Tiy" secondAttribute="top" constant="10" id="iYm-g4-QOa"/>
+                            <constraint firstItem="6TB-2o-qcg" firstAttribute="top" secondItem="ovT-E5-JfL" secondAttribute="bottom" constant="60" id="u45-q4-LsE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="eMailTextField" destination="UA0-TH-GRy" id="q0F-fr-4ML"/>
+                        <outlet property="girisYapButton" destination="6TB-2o-qcg" id="0u4-Af-7PA"/>
+                        <outlet property="sifreTextField" destination="VPl-2E-VCg" id="Xay-Ne-ARH"/>
+                        <outlet property="sifremiUnuttumButton" destination="ZZL-NJ-HTt" id="y9C-IV-FdV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uFi-cJ-yey" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876" y="133"/>
+        </scene>
+        <!--Uyeol View Controller-->
+        <scene sceneID="EVy-U8-ZWO">
+            <objects>
+                <viewController id="U1g-up-2XJ" customClass="UyeolViewController" customModule="LoginView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="860-Ql-Xc5">
+                        <rect key="frame" x="0.0" y="0.0" width="361" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Kullanıcı adı belirle" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uj3-vq-rIe">
+                                <rect key="frame" x="0.0" y="10" width="361" height="45"/>
+                                <color key="backgroundColor" name="2.renk"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="MEg-Pk-DjX"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="OYI-Mj-4ZQ"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Şifre belirle" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Juy-gr-h6w">
+                                <rect key="frame" x="0.0" y="63" width="361" height="45"/>
+                                <color key="backgroundColor" name="2.renk"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="FLA-TC-whP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="GOr-pl-6sa"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  Şifre onayla" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gK3-v5-H3b">
+                                <rect key="frame" x="0.0" y="116" width="361" height="45"/>
+                                <color key="backgroundColor" name="2.renk"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Soo-i6-L8q"/>
+                                    <constraint firstAttribute="height" constant="45" id="orR-zM-pM7"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhD-Qc-RP2">
+                                <rect key="frame" x="0.0" y="199" width="361" height="45"/>
+                                <color key="backgroundColor" name="3.renk"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="PHd-jY-Q3P"/>
+                                    <constraint firstAttribute="height" constant="45" id="YNo-OR-HVo"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Üye Ol">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="15"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uzs-Tq-As5"/>
+                        <color key="backgroundColor" name="AnaRenk"/>
+                        <constraints>
+                            <constraint firstItem="gK3-v5-H3b" firstAttribute="top" secondItem="Juy-gr-h6w" secondAttribute="bottom" constant="8" id="1M1-ix-Mxs"/>
+                            <constraint firstItem="jhD-Qc-RP2" firstAttribute="top" secondItem="gK3-v5-H3b" secondAttribute="bottom" constant="38" id="3Y5-ck-0Wg"/>
+                            <constraint firstItem="Uj3-vq-rIe" firstAttribute="top" secondItem="860-Ql-Xc5" secondAttribute="top" constant="10" id="3gz-Yj-vm7"/>
+                            <constraint firstItem="jhD-Qc-RP2" firstAttribute="trailing" secondItem="uzs-Tq-As5" secondAttribute="trailing" id="6Ou-VX-jBq"/>
+                            <constraint firstItem="Juy-gr-h6w" firstAttribute="top" secondItem="Uj3-vq-rIe" secondAttribute="bottom" constant="8" id="AoC-45-x1c"/>
+                            <constraint firstItem="jhD-Qc-RP2" firstAttribute="leading" secondItem="uzs-Tq-As5" secondAttribute="leading" id="Aoz-Yn-NWz"/>
+                            <constraint firstItem="gK3-v5-H3b" firstAttribute="trailing" secondItem="uzs-Tq-As5" secondAttribute="trailing" id="BPt-K7-QaD"/>
+                            <constraint firstAttribute="trailing" secondItem="Uj3-vq-rIe" secondAttribute="trailing" id="CkZ-lu-avc"/>
+                            <constraint firstItem="Juy-gr-h6w" firstAttribute="leading" secondItem="uzs-Tq-As5" secondAttribute="leading" id="JlJ-If-TCR"/>
+                            <constraint firstItem="Juy-gr-h6w" firstAttribute="trailing" secondItem="uzs-Tq-As5" secondAttribute="trailing" id="TgO-Ps-Imr"/>
+                            <constraint firstItem="gK3-v5-H3b" firstAttribute="leading" secondItem="uzs-Tq-As5" secondAttribute="leading" id="aW8-gu-Lqq"/>
+                            <constraint firstItem="Uj3-vq-rIe" firstAttribute="leading" secondItem="860-Ql-Xc5" secondAttribute="leading" id="myO-D1-r70"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="kullaniciadiBelirleTextField" destination="Uj3-vq-rIe" id="V0A-Ah-bLb"/>
+                        <outlet property="sifreBelirleTextField" destination="Juy-gr-h6w" id="G6p-i2-yja"/>
+                        <outlet property="sifreOnayiTextField" destination="gK3-v5-H3b" id="XkE-fi-ytl"/>
+                        <outlet property="uyeOlButton" destination="jhD-Qc-RP2" id="pZ5-2l-VeE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vvC-1v-djf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876" y="-129"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="facebooklogo" width="600" height="600"/>
+        <image name="google" width="512" height="512"/>
+        <image name="phonelogo" width="360" height="360"/>
+        <namedColor name="2.renk">
+            <color red="0.61568627450980395" green="0.73725490196078436" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="3.renk">
+            <color red="0.38823529411764707" green="0.53333333333333333" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AnaRenk">
+            <color red="0.97647058823529409" green="0.93725490196078431" blue="0.85882352941176465" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
